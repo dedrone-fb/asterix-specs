@@ -1,0 +1,14 @@
+#! /nix/store/9zm6br2ri10a0b71dll2wrim5bnhg6b6-bash-5.1-p16/bin/bash -e
+PATH=${PATH:+':'$PATH':'}
+PATH=${PATH/':''/nix/store/d71d4hkmkm58148y3zqgm2rqnfr5ybbz-pandoc-2.17.1.1/bin'':'/':'}
+PATH='/nix/store/d71d4hkmkm58148y3zqgm2rqnfr5ybbz-pandoc-2.17.1.1/bin'$PATH
+PATH=${PATH#':'}
+PATH=${PATH%':'}
+export PATH
+PATH=${PATH:+':'$PATH':'}
+PATH=${PATH/':''/nix/store/hlp8zmzahgbl6xv94scrrif495iw1dsy-texlive-combined-2021/bin'':'/':'}
+PATH='/nix/store/hlp8zmzahgbl6xv94scrrif495iw1dsy-texlive-combined-2021/bin'$PATH
+PATH=${PATH#':'}
+PATH=${PATH%':'}
+export PATH
+exec -a "$0" "/nix/store/4w59jy7rxj44p998xbr595h5nv6rjvnq-rst-to-pdf/bin/.rst-to-pdf-wrapped"  "$@"
